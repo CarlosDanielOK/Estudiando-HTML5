@@ -1,1 +1,1 @@
-# Estudiando HTML5 y CSS3
+# Estudiando HTML5, CSS3 y JavaScript.
