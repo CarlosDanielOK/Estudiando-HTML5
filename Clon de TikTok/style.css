@@ -1,0 +1,191 @@
+body {
+    background-color: black;
+    font-family: Arial;
+    font-weight: bold;
+    color: white;
+}
+
+/* HEADER: LOGO DE TIKTOK, BARRA DE BUSQUEDA, INICIAR SESION */
+
+header {
+    background-color: #121212;
+    height: 70px;
+}
+
+.presentacion {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.presentacion-logo {
+    padding-left: 10px;
+}
+
+.presentacion-barra-busqueda {
+    border-radius: 30px;
+    background-color: #2F2F2F;
+}
+
+.boton-busqueda {
+    display: flex;
+}
+
+.boton-busqueda input {
+    background-color: #2F2F2F;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 400px;
+    padding: 14px;
+    color: white;
+}
+
+.boton-busqueda button {
+    background-color: #2F2F2F;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.presentacion-iniciar-sesion {
+    padding-right: 10px;
+}
+
+.presentacion-iniciar-sesion form button {
+    background-color: #FF3B5C;
+    color: white;
+    font-weight: bold;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.presentacion-iniciar-sesion form button:hover {
+    background-color: #fd274b;
+}
+
+/*MAIN*/
+main {
+    background-color: black;
+}
+
+.main {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 520px;
+}
+
+.main-contenedor {
+    background-color: black;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*video*/
+
+.main-videos video {
+    border: 1px solid gray;
+    border-radius: 15px;
+    width: 270px;
+    height: 480px;
+}
+
+/*barra de interacion*/
+.main-interaccion {
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.main-interaccion-iconos {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F1F1F;
+}
+
+.main-interaccion-iconos p {
+    color: white;
+    margin-block-start: 4px;
+    margin-block-end: 4px;
+
+}
+
+/*FOOTER: BARRA LATERAL DE NAVEGACION*/
+.footer {
+    background-color: #121212;
+    width: 20vw;
+    height: 543px;
+}
+
+.lateral-iconos img {
+    width: 30px;
+    height: 30px;
+    margin-left: 6px;
+}
+
+.lateral-iconos {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.lateral-iconos span {
+    margin-left: 6px;
+}
+
+.nuevo-notificacion {
+    background-color: #FF3B5C;
+    border-radius: 30px;
+    padding: 7px;
+}
+
+.parati {
+    color: #FF3B5C;
+}
+
+.lateral-mensaje {
+    width: 222px;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.mensaje-bienvenida {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.boton-iniciar-sesion {
+    display: flex;
+    justify-content: center;
+}
+
+.boton-iniciar-sesion button {
+    border: 2px solid #FF3B5C;
+    border-radius: 8px;
+    width: 222px;
+    height: 55px;
+    background-color: #252525;
+    color: #FF3B5C;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

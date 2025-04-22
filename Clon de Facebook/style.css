@@ -1,0 +1,134 @@
+@font-face {
+    font-family: SFPRODISPLAYREGULAR;
+    src: url(font/SFPRODISPLAYREGULAR.OTF);
+}
+
+body {
+    font-family: SFPRODISPLAYREGULAR, Helvetica, Arial, sans-serif;
+}
+
+/* FACEBOOK PPRESENTACION Y LOGIN*/
+div#contenedor-principal {
+    background-color: #f0f2f5;
+    height: 720px;
+    /* centro el contenido dentro del div#contenedor-principal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#contenedor-facebook {
+    width: 1000px;
+    height: 555px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#presentacion-facebook {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header#logoyinfo {
+    width: 50%;
+    height: fit-content;
+}
+
+figure {
+    width: fit-content; /*ajusta el ancho al tamaño de la imagen*/
+}
+
+img#facebook-logo {
+    width: 320px;
+    margin-left: -70px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: normal;
+    width: 480px;
+}
+
+/* login */
+main#login {
+    width: 50%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div#formulario-login {
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input.usuarioycontra {
+    border: 1px solid #dddfe2;
+    width: 330px;
+    height: 52px;
+    border-radius: 6px;
+    padding: 14px 16px;
+    height: 22px;
+    font-size: 17px;
+}
+
+form div {
+    margin: 6px 0;
+}
+
+input.iniciar {
+    width: 365px;
+    height: 52px;
+    font-size: 20px;
+    background-color: #0866ff;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+    border: 0px;
+}
+
+div#olvidaste {
+    font-size: 16px;
+}
+
+input#crear {
+    background-color: #36a420;
+    border: 0px;
+    font-size: 20px;
+    height: 52px;
+    border-radius: 6px;
+    padding: 0 15px;
+    font-weight: bold;
+    color: white;
+}
+
+/*FACEBOOK FOOTER*/
+footer {
+    background-color: blue;
+    height: 180px;
+}
+
+span {
+    font-size: 14px;
+    font-weight: bold;
+}
