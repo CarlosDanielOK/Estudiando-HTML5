@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(23, 41, 56);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENEDORES */
+div.contenedor-principal {
+    width: 50vw;
+    max-width: 600px;
+    min-height: 350px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.color {
+    padding: 20px;
+    margin: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

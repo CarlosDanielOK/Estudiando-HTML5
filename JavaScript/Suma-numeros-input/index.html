@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Suma numeros input</title>
+</head>
+
+<body>
+    <main>
+        <div id="contenedor-interno">
+            <div>
+                <h1>Suma dos números entre 0 a 1000</h1>
+            </div>
+            <div>
+                <input id="inputSumando1" type="range" min="0" max="1000" value="10" step="1">
+                <p id="texto-input1">10</p>
+            </div>
+            <div>
+                <p>+</p>
+            </div>
+            <div>
+                <input id="inputSumando2" type="range" min="0" max="1000" value="90" step="1">
+                <p id="texto-input2">90</p>
+            </div>
+            <div>
+                <p>=</p>
+                <p id="texto-resultado">100</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

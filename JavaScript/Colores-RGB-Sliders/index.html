@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="img/socialnetwork.jpg">
+    <title>Colores RGB Sliders</title>
+</head>
+<body>
+    <div class="contenedor-principal">
+        <div class="contenedor-interno">
+            <div class="color">
+                <label for="rojo">Rojo (R)</label>
+                <input id="rojo" type="range" min="0" max="255" value="23" step="1"> <!-- id="rojo": El atributo id le da un identificador único al elemento <input>. Este id es utilizado por la etiqueta <label> para hacer referencia al control. type="range": El tipo range especifica que el control es un control deslizante, que permite al usuario seleccionar un valor de un rango predefinido moviendo un control deslizante. min="0": Define el valor mínimo que el control deslizante puede tener, en este caso, 0. max="255": Define el valor máximo que el control deslizante puede alcanzar, en este caso, 255. Esto es útil para seleccionar un valor dentro de un rango determinado, como en el caso de un componente de color RGB. value="23": Establece el valor inicial del control deslizante. Al cargar la página, el control deslizante estará en la posición que corresponde al valor 23. step="1": Define el intervalo entre los valores permitidos en el control deslizante. Aquí, el usuario podrá ajustar el valor en incrementos de 1. -->
+                <p id="texto-rojo"></p>
+            </div>
+            <div class="color">
+                <label for="verde">Verde (G)</label>
+                <input id="verde" type="range" min="0" max="255" value="41" step="1">
+                <p id="texto-verde"></p>
+            </div>
+            <div class="color">
+                <label for="azul">Azul (B)</label>
+                <input id="azul" type="range" min="0" max="255" value="56" step="1">
+                <p id="texto-azul"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

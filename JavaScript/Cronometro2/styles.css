@@ -1,0 +1,63 @@
+/* Estilos Globales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor del Cronómetro */
+.container {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+/* Display del Cronómetro */
+.display {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    border-radius: 8px;
+}
+
+/* Botones de Control */
+.controls {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button:active {
+    background-color: #004494;
+}
+
+.button:disabled {
+    background-color: #ddd;
+    color: #aaa;
+    cursor: not-allowed;
+}
