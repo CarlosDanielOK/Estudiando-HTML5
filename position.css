@@ -1,0 +1,51 @@
+div.padre {
+    width: 200px;
+    height: 200px;
+    background: red;
+    margin: 40px;
+}
+
+div.hijo {
+    width: 50px;
+    height: 50px;
+    background: blue;
+}
+
+/* STATIC */
+
+div#hijo1 {
+    position: static; /* static nunca tiene en cuenta las coordenadas de top bottom left right */
+    top: 1000px; /* no sirve porque hijo1 tiene position static */
+}
+
+/* RELATIVE */
+
+div#hijo2 {
+    position: relative; /* relative permite posicionar el elemento con top bottom left right desde el origen del contenedor padre */
+    top: 25px;
+    left: 40px;
+}
+
+/* ABSOLUTE */
+
+div#hijo3 {
+    background: yellow;
+    position: absolute; /* absolute permite posicionar el elemento con origen respecto al padre que no tenga position relative o absolute */
+    top: 0px;
+}
+
+div#hijo4 {
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+
+/* FIXED */
+
+div#pfixed {
+    width: 60px;
+    height: 60px;
+    background: orange;
+    position: fixed; /* fixed permite posicionar el elemento con origen respecto al body siempre y se queda fijado */
+    top: 0px;
+}

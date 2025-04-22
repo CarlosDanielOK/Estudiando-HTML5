@@ -1,0 +1,50 @@
+:root {
+    font-size: 60px;
+}
+body {
+    font-size: 22px; /* tamaño de fuente, tamaño de la letra */
+}
+
+article {
+    font-size: 16px;
+}
+
+p.em {
+    font-size: 2em; /*  em toma como medida de referencia o base la medida del padre mas cercano y en base a esa medida calcula, por ej, si article declara una medida de 16px que seria el padre mas cercano de p, entonces 2em daria como resultado 32px en todos los p.em */
+}
+
+p.rem {
+    font-size: 1rem; /* rem toma como medida de referencia o base la medida del root, o del padre mas lejano, en este caso la medida del root es de 60px */
+}
+
+#medidasAbsolutas p.in {
+    font-size: .2in;
+}
+
+#medidasAbsolutas p.cm {
+    font-size: 1cm;
+}
+
+#medidasAbsolutas p.mm {
+    font-size: 10mm;
+}
+
+#medidasAbsolutas p.pt {
+    font-size: 30pt;
+}
+
+#medidasAbsolutas p.pc {
+    font-size: 3pc;
+}
+
+#medidasPorcentuales div.fija {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
+#medidasPorcentuales div.porcentual {
+    height: 100px;
+    width: 50%; /* 50% del padre */
+    background-color: green;
+}

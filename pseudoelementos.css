@@ -1,0 +1,8 @@
+p:before {
+    content: "Hola";
+    top: 50px;
+    left: 50px;
+    position: relative;
+}
+
+/* NO ENTENDI, INVESTIGAR */

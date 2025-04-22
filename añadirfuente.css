@@ -1,0 +1,18 @@
+/* @font-face indica la fuente y donde esta ubicada para cargarla */
+/* FUENTE LOCAL */
+@font-face {
+    font-family: "Jersey20Charted"; /* indico la fuente */
+    src: url("font/Jersey_20_Charted/Jersey20Charted.ttf"); /* indico la ubicacion de la fuente */
+}
+
+p {
+    font-size: 30px;
+    font-family: "Jersey20Charted";
+}
+
+/* FUENTE EXTERNA */
+span {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}

@@ -1,0 +1,17 @@
+/* :hover sirve para modificar la apariencia de un elemento al pasar la flechita del mouse encima */
+p:hover {
+    color: red;
+    font-size: 20px;
+}
+
+/* :active sirve para modificar la apariencia de un elemento al hacer click, es decir, si mantienes el clik en un elemento se aplica lo que hayas escrito dentro de las llaves de active */
+span:active {
+    color: yellow;
+    font-size: 20px;
+}
+
+/* :focus sirve para modificar la apariencia al hacer click en la casilla de un formulario */
+input:focus {
+    border-radius: 15px;
+    background-color: red;
+}

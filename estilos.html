@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probando estilos</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="estilos.css"> <!-- enlazo el archivo css -->
+    <script src="nombre_archivo.js"></script> <!-- agrega compatilidad con versiones de navegadores anteriores a la fecha actual -->
+</head>
+<body>
+    <header>
+        <h2>Titulo secundario</h2>
+    </header>
+    <h2>Titulo secundario</h2>
+    <h3>Titulo terciario</h3>
+
+    <p>Texto de prueba</p>
+    <p id="textoAzul">Texto de prueba</p> <!-- los id deben ser unicos para un solo elemento css, no se deben repetir el mismo nombre de un id para otro elemento. Se usan cuando un elemento vaya a tener un estilo unico -->
+    <p>Texto de prueba</p>
+    <p>Texto de prueba</p>
+    <p>Texto de prueba</p>
+
+    <p class="textoNaranja">Texto de prueba</p> <!-- las clases se utilizan cuando quieras darle el mismo a un grupo de elementos, el grupo de elementos a aplicar dicho estilo deben llevar el mismo nombre de clase -->
+    <p class="textoNaranja">Texto de prueba</p>
+    <p class="textoNaranja">Texto de prueba</p>
+    <p class="textoNaranja">Texto de prueba</p>
+    <p class="textoNaranja">Texto de prueba</p>
+
+    <div>
+        <p>Texto de prueba</p>
+        <p>Texto de prueba</p>
+        <p>Texto de prueba</p>
+    </div>
+
+    <p title="texto">Texto de prueba</p> <!--  lo misma logica que el atributo lang de abajo -->
+    <p lang="es-ES">Texto de prueba</p> <!-- el atributo lang a veces es necesario en algunos elementos por cuestiones de ceo, en css se puede aplicar un estilo para dicho elemento con p[lang |= "es"] -->
+    <p>Texto de prueba</p>
+
+</body>
+</html>

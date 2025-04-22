@@ -1,0 +1,20 @@
+p {
+    font-family: sofia pro;
+    font-weight: bold; /* tipos de letra de la fuente */
+    font-style: italic; /* estilo de letra de la fuente */
+    text-align: center; /* centra el texto */
+    text-decoration: line-through; /* tacha el texto */
+    text-transform: uppercase; /* convierte todo a mayusculas */
+    text-indent: 500px; /* identacion */
+    letter-spacing: 6px; /* espacio entre las letras */
+    word-spacing: 29px; /* espacio entre las palabras */
+}
+
+/* modifica el tamaño de la primera letra del texto */
+p::first-letter {
+    font-size: 30px;
+}
+/* modifica el tamaño de toda la linea de texto */
+p::first-line {
+    font-size: 15px;
+}

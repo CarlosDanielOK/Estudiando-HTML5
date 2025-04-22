@@ -1,0 +1,19 @@
+div {
+    width: 500px;
+    height: 1000px;
+    background: red;
+}
+
+article.hijo1 {
+    width: 100px;
+    height: 100px;
+    background: green;
+    float: left;
+}
+
+article.hijo2 {
+    width: 200px;
+    height: 200px;
+    background: blue;
+    display: inline-block;
+}

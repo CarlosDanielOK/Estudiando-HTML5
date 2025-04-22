@@ -1,0 +1,36 @@
+header h2,
+h3 {
+    color: red;
+}
+
+p {
+    color: red;
+}
+
+p#textoAzul { /* para hacer referencia a un id se usa # */
+    color: blue;
+}
+
+p.textoNaranja { /* para hacer referencia a una clase se usa . */
+    color: orange;
+}
+
+p+p { /* aplica el estilo a todo p que antes tenga otra p antes */
+    font-weight: bolder;
+}
+
+div > p { /* aplica el estilo a todo p hijo directo de un div */
+    color: blueviolet;
+}
+
+p ~ p { /* hermanos, no entendi como funciona correctamente */
+    color: aqua;
+}
+
+p[title="texto"] {
+    color: brown;
+}
+
+p[lang |= "es"] { /* se aplica el estilo a todo p que tenga el atributo lang="es", no importa que haya despues del guion, ej: lang="es-ES" lang="en-EN */
+    color: chartreuse;
+}

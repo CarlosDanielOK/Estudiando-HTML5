@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Primer página</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul> <!--lista desordenada-->
+                    <li>Opcion 1</li> <!--list item-->
+                    <li>Opcion 2</li>
+                    <li>Opcion 3</li>
+                </ul>
+                <!--nunca poner mas de una lista dentro de nav-->
+                <ol> <!--lista ordenada--> 
+                    <li>Opcion 1</li> <!--list item-->
+                    <li>Opcion 2</li>
+                    <li>Opcion 3</li>
+                </ol>
+                <!--ENLACES-->
+                <ul>
+                    <li><a href="www.google.com">Ir a Google</a></li> <!--forma correcta de poner un enlace con listas-->
+                    <a href="www.google.com"><li>Ir a Google</li></a> <!--Nunca poner una lista dentro de un enlace-->
+                    <li><a target="_blank" href="www.google.com">Ir a Google en otra pestaña</a></li>
+                    <li><a href="#naruto">Ir a una parte especifica de la pagina (Seccion Naruto)</a></li> <!--enlazar a una parte especifica de la pagina-->
+                    <li><a href="otrapagina.html">Ir a otra pagina dentro de la misma carpeta</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+        <section>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat dolorem similique voluptatibus deleniti eveniet minima, eos sunt molestiae. Blanditiis dignissimos quaerat saepe laboriosam cupiditate corporis accusantium eum, illo fugit.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat dolorem similique voluptatibus deleniti eveniet minima, eos sunt molestiae. Blanditiis dignissimos quaerat saepe laboriosam cupiditate corporis accusantium eum, illo fugit.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat dolorem similique voluptatibus deleniti eveniet minima, eos sunt molestiae. Blanditiis dignissimos quaerat saepe laboriosam cupiditate corporis accusantium eum, illo fugit.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat dolorem similique voluptatibus deleniti eveniet minima, eos sunt molestiae. Blanditiis dignissimos quaerat saepe laboriosam cupiditate corporis accusantium eum, illo fugit.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat dolorem similique voluptatibus deleniti eveniet minima, eos sunt molestiae. Blanditiis dignissimos quaerat saepe laboriosam cupiditate corporis accusantium eum, illo fugit.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat dolorem similique voluptatibus deleniti eveniet minima, eos sunt molestiae. Blanditiis dignissimos quaerat saepe laboriosam cupiditate corporis accusantium eum, illo fugit.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat dolorem similique voluptatibus deleniti eveniet minima, eos sunt molestiae. Blanditiis dignissimos quaerat saepe laboriosam cupiditate corporis accusantium eum, illo fugit.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat dolorem similique voluptatibus deleniti eveniet minima, eos sunt molestiae. Blanditiis dignissimos quaerat saepe laboriosam cupiditate corporis accusantium eum, illo fugit.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat dolorem similique voluptatibus deleniti eveniet minima, eos sunt molestiae. Blanditiis dignissimos quaerat saepe laboriosam cupiditate corporis accusantium eum, illo fugit.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat dolorem similique voluptatibus deleniti eveniet minima, eos sunt molestiae. Blanditiis dignissimos quaerat saepe laboriosam cupiditate corporis accusantium eum, illo fugit.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat dolorem similique voluptatibus deleniti eveniet minima, eos sunt molestiae. Blanditiis dignissimos quaerat saepe laboriosam cupiditate corporis accusantium eum, illo fugit.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat dolorem similique voluptatibus deleniti eveniet minima, eos sunt molestiae. Blanditiis dignissimos quaerat saepe laboriosam cupiditate corporis accusantium eum, illo fugit.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero repellat dolorem similique voluptatibus deleniti eveniet minima, eos sunt molestiae. Blanditiis dignissimos quaerat saepe laboriosam cupiditate corporis accusantium eum, illo fugit.</article>
+        </section>
+        <section id="naruto">
+            <article>Seccion Naruto</article>
+        </section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptas laboriosam nihil. Blanditiis, nesciunt id distinctio animi sequi, laudantium autem asperiores quia amet fugiat magnam nihil numquam nemo enim modi!</p>
+        <p>Lorem ipsum dolor sit amet <span>una frase lineal, es decir se intrega dentro del texto, normalmente para darle otro diseño</span> consectetur adipisicing elit. Totam, est. Magni in facilis error iusto voluptates consequuntur distinctio omnis delectus reiciendis sed optio quas, excepturi fuga nesciunt, esse id neque!</p>
+        <br> <!--salto de linea-->
+        <p>Lorem ipsum dolor sit amet <strong>strong para darle mas peso semantico, como mas importancia a la hora de que google busque tu pagina. El estilo se puede quitar con css</strong> adipisicing elit. Ut labore accusamus minus cum! <em>em es casi lo mismo que strong pero con menos relevancia. El estilo se puede quitar con css</em> Enim quidem, dolores cupiditate expedita molestiae incidunt dolorum, aperiam illum eius consequatur voluptas, impedit accusantium reiciendis ex.</p>
+
+        <!--IMAGENES-->
+        <figure>
+            <figcaption>Tanjiro y Yoriichi</figcaption>
+            <img src="tanjiro.png" alt="tanjiro y yoriichi">
+        </figure>
+
+        <!--AUDIO-->
+        <audio src="HAKARI DANCE.mp3" type="audio/mp3" controls="controls"></audio>
+
+        <!--VIDEO-->
+        <video src="HAKARI DANCE 4k-(1080p).mp4" type="video/mp4" controls="controls"></video> <!-- se recomienda no usar esta etiquita porque puede dar errores de compatibilidad en algunos navegadores-->
+
+        <!-- atributos:
+
+        src 	Cadena que representa una URL que señala a un archivo de vídeo.
+
+        controls 	Atributo booleano que activa un conjunto de controles de reproducción integrados. Normalmente incluye reproducción, pausa, buscar y ajustar volumen. Internet Explorer 10 también muestra un control para elegir varias pistas de audio y texto.
+
+        poster 	Cadena que representa una imagen de marcador de posición y que se muestra en el reproductor de vídeo. La imagen de póster solo se muestra cuando un vídeo no está disponible, bien porque el origen no está en ese punto o porque el contenido aún se está cargando.
+
+        loop 	Atributo booleano que reproduce el vídeo repetidamente hasta que se presiona el botón de pausa en los controles, o se llama al método pause desde un script.
+        muted 	Atributo booleano que reproduce vídeo con la pista de audio desactivada.
+
+        autoplay 	Atributo booleano que inicia la reproducción de vídeo automáticamente cuando el reproductor tiene suficiente contenido almacenado en búfer.
+
+        preload 	Atributo booleano que define una clave sobre cuánto almacenamiento en búfer es necesario.
+
+        height 	Establece el alto del reproductor de vídeo, en píxeles.
+
+        width 	Establece el ancho del reproductor de vídeo, en píxeles.-->
+
+        <iframe src="https://www.youtube.com/embed/sfptjZWA-ek?si=d6r5t8tTN3GfrwYm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <!--inserta un video de youtube-->
+    </body>
+</html>

@@ -1,0 +1,37 @@
+
+body {
+    background: rgb(225, 0, 255);
+}
+div {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    margin: 20px;
+}
+div.reservadas {
+    background: red;
+}
+
+div.luzRGB {
+    background: rgb(0, 255, 0); /* colores rgb*/
+}
+
+div.hex {
+    background: #ffee05; /* colores hexadecimal */
+}
+
+div.porcentual {
+    background: rgb(100%, 50%, 10%); /* colores rbg porcentuales, indicas que porcentaje quieres de rojo, verde y azul */
+}
+
+div.hsl {
+    background: hsl(240, 100%, 50%); /* tono, saturacion y luz */
+}
+
+div.rgba {
+    background: rgba(255, 100, 150, 0); /* rojo, verde, azul, alpha. Alpha tiene dos valores, 0 y 1, 1 es color solido, y 0 es trasparencia, es decir se ajusta al color del fondo de la pagina */
+}
+
+div.hsla {
+    background: hsla(240, 150%, 20%, 1); /* la misma logica que rgba */
+}
