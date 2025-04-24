@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Estudiando imágenes en HTML5</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Estoy estudiando imágenes en HTML5. Hoy es 12/7/2022.">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./icon/Naruto databook 3.jpg" type="image/jpg" sizes="16x16">
+    </head>
+    <body>
+        <header>
+            <h1>Estudiando imágenes en HTML5</h1>
+        </header>
+        <nav>
+            <a href="index.html">Principal</a> |
+            <a href="atributosGlobales.html">Atributos globales</a> |
+            <a href="texto.html">Texto</a> |
+            <a href="enlaces.html">Enlaces</a> |
+            <a href="imagenes.html">Imágenes (enlace a este mismo documento)</a>
+        </nav>
+        <main>
+            <section>
+                <article>
+                    <p>Foto de Naruto y Sasuke</p>
+                    <!-- Algunas imágenes, como los iconos, son importantes porque otorgan un significado al resto del contenido, pero otras, como la imagen de estos ejemplos, actúan como complemento y se pueden eliminar sin que afecten al flujo de información. Cuando esta clase de información se encuentra presente, se puede utilizar el elemento <figure> para identificarla. Este elemento se suele implementar junto con el elemento <figcaption> para incluir texto descriptivo. En el siguiente ejemplo usamos estos dos elementos para identificar nuestra imagen y mostrar su título al usuario. Por defecto, los navegadores asignan márgenes laterales al elemento <figure>. -->
+                    <figure>
+                        <img src="./img/Naruto y Sasuke.jpg" width="500" alt="Foto de Naruto y Sasuke">
+                        <figcaption>Foto de Naruto y Sasuke con sus nuevos poderes.</figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <p>Foto de NARUTO</p>
+                    <!-- <img> Este elemento inserta una imagen en el documento. El elemento requiere del atributo src para especificar la URL del archivo con la imagen que queremos incorporar. Para incluir una imagen en el documento, solo necesitamos declarar el elemento <img> y asignar la URL del archivo al atributo src. La imagen se representa en su tamaño original, pero podemos definir un tamaño personalizado y algunos parámetros de configuración usando el resto de los atributos disponibles para el elemento <img>. -->
+                    <!-- El atributo width declara el ancho de la imagen. El atributo height declara la altura de la imagen. El atributo alt especifica el texto que se muestra cuando la imagen no se puede cargar. Los atributos width y height determinan las dimensiones de la imagen, pero no tienen en cuenta la relación. Si declaramos ambos valores sin considerar la proporción original de la imagen, el navegador deberá estirar o achatar la imagen para adaptarla a las dimensiones definidas. Para reducir la imagen sin cambiar la proporción original, podemos especificar uno solo de los atributos y dejar que el navegador calcule el otro. -->
+                    <!-- Se agrega el atributo width con el valor 500 al elemento <img>. Esto reduce el ancho de la imagen a 500 píxeles, pero como el atributo height no se ha declarado, la altura de la imagen se calcula automáticamente considerando las proporciones originales de la imagen. -->
+                    <img src="./img/Naruto.png" width="500" alt="Logo de Naruto">
+                </article>
+            </section>
+        </main>
+        <footer>
+            <br><br>
+            <address>New York, United States</address>
+            <small>&copy; Carlos 2022</small>
+        </footer>
+    </body>
+</html>
+
+<!-- Las imágenes pueden se pueden considerar el segundo medio más importante en la Web. HTML incluye los siguientes elementos para introducir imágenes en nuestros documentos.
+    <img>—Este elemento inserta una imagen en el documento. El elemento requiere del atributo src para especificar la URL del archivo con la imagen que queremos incorporar.
+    <picture>—Este elemento inserta una imagen en el documento. Trabaja junto con el elemento <source> para ofrecer múltiples imágenes en diferentes resoluciones. Es útil para crear sitios web adaptables, como veremos en el Capítulo 5.
+    <figure>—Este elemento representa contenido asociado con el contenido principal, pero que se puede eliminar sin que se vea afectado, como fotos, vídeos, etc.
+    <figcaption>—Este elemento introduce un título para el elemento <figure>. -->

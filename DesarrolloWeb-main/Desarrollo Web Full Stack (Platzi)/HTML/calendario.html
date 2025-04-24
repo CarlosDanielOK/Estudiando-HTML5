@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Calendario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="robots" content="index, follow">
+    </head>
+    <body>
+        <header>
+            <h1>Calendario en HTML5</h1>
+            <p>Fecha: 28/09/2022</p>
+        </header>
+        <nav>
+
+        </nav>
+        <main>
+            <section>
+                <!-- Formulario de hora, dia, semana, mes y año -->
+                <!-- El atributo name dentro de cada etiqueta label se utiliza para que al darle click al boton enviar, en la url se muestre el valor de name con los datos enviados al servidor. -->
+                <form>
+                    <label for="hora">
+                        <span>Hora</span>
+                        <input type="time" id="hora" name="hora">
+                    </label>
+                    <label for="dia">
+                        <span>Día</span>
+                        <input type="date" id="dia" name="dia">
+                    </label>
+                    <label for="semana">
+                        <span>Semana</span>
+                        <input type="week" id="semana" name="semana">
+                    </label>
+                    <label for="mes">
+                        <span>Mes</span>
+                        <input type="month" id="mes" name="mes">
+                    </label>
+                    <input type="submit">
+                </form>
+            </section>
+            <section>
+                <form>
+                    <label for="calendario">
+                        <span>Calendario</span>
+                        <input type="datetime-local" id="calendario" name="calendario"> <!-- datetime-local permite elegir el dia, mes, año, hora. -->
+                    </label>
+                    <input type="submit">
+                </form>
+            </section>
+        </main>
+        <footer>Terminado.</footer>
+    </body>
+</html>

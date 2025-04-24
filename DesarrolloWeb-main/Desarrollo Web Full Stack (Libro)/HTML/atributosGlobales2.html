@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Estudiando atributos globales en HTML5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Estoy estudiando atributos globales en HTML5. Hoy es 18/7/2022.">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="robots" content="index,follow">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./icon/Sasuke vs Kages.jpg" type="image/jpg" sizes="16x16">
+    </head>
+    <body>
+        <header>
+            <h1>Estoy estudiando atributos globales en HTML5</h1>
+            <p>Fecha: 18/7/2022. Hora: 02:57 am.</p>
+        </header>
+        <main>
+            <section>
+                <!-- La mayoría de los navegadores actuales automáticamente traducen el contenido del documento cuando detectan que se ha escrito en un idioma diferente al del usuario, pero en algunos casos la página puede incluir frases o párrafos enteros que no se deben alterar, como nombres de personas o títulos de películas. Para controlar el proceso de traducción, HTML ofrece un atributo global llamado translate. Este atributo puede tomar dos valores: yes y no. Por defecto, el valor es yes (si). En el siguiente ejemplo, usamos un elemento <span> para especificar la parte del texto que no se debería traducir. -->
+                <article>
+                    <p>My favorite anime is <span translate="no">Naruto</span>.</p> <!-- El elemento <span> se diseñó para presentar texto, pero a diferencia del elemento <p> no asigna ningún estilo al contenido, por lo que el texto se presenta en la misma línea y con el tipo de letra y tamaño por defecto. -->
+                </article>
+                <article>
+                    <!-- Otro atributo útil que podemos agregar a un elemento HTML es contenteditable. Este es un atributo booleano que, si está presente, permite al usuario editar el contenido del elemento. Si el usuario hace clic en un elemento que contiene este atributo, puede cambiar su contenido. El siguiente ejemplo implementa el elemento <span> nuevamente para permitir a los usuarios editar el nombre de una película. Las modificaciones introducidas por el usuario solo se encuentran disponibles en su ordenador. Si queremos que los cambios se almacenen en el servidor, tenemos que subir esta información con un programa en JavaScript usando Ajax, según veremos en el Capítulo 21. -->
+                    <p>Mi anime favorito es <span contenteditable>Naruto</span>.</p>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <address>New York, Estados Unidos</address>
+            <small>Finalizado: 03:09 am.</small>
+            <p>&copy; Carlos 2022</p>
+        </footer>
+    </body>
+</html>

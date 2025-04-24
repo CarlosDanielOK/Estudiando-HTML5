@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Estudiando listados en HTML5</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Estudiando listados en HTML5. Hoy es 14/7/2022.">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index,follow">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./icon/Sasuke revolucion.png" type="image/png" sizes="16x16">
+    </head>
+    <body>
+        <header>
+            <h1>Estudiando listados en HTML5</h1>
+            <p>Fecha: 14/7/2022. Hora: 02:53 am.</p>
+        </header>
+        <nav>
+            <a href="index.html">Principal</a> |
+            <a href="atributosGlobales.html">Atributos globales</a> |
+            <a href="texto.html">Texto</a> |
+            <a href="enlaces.html">Enlaces</a> |
+            <a href="listados.html">Listados (enlace a este mismo documento)</a>
+        </nav>
+        <main>
+            <section>
+                <p>Muy bien, sigue así. No te rindas.</p>
+            </section>
+            <aside>
+                <h2>Lista con el elemento ul</h2>
+                <!-- <ul> Este elemento crea una lista de ítems sin orden. Está compuesto por etiquetas de apertura y cierre para agrupar los ítems (<ul> y </ul>) y trabaja junto con el elemento <li> para definir cada uno de los ítems de la lista. El elemento <ul> presenta los ítems en el orden en el que se han declarado en el código y los identifica con un punto del lado izquierdo. -->
+                <ul>
+                    <li>Naruto. Manga 1</li>
+                    <li>Naruto. Manga 2</li>
+                    <li>Naruto. Manga 3</li>
+                    <li>Naruto. Manga 4</li>
+                </ul>
+
+                <h2>Lista con el elemento ol</h2>
+                <!-- <ol> Este elemento crea una lista ordenada de ítems. Está compuesto por etiquetas de apertura y cierre para agrupar los ítems (<ol> y </ol>) y trabaja junto con el elemento <li> para definir los ítems de la lista. Este elemento puede incluir los atributos reversed para invertir el orden de los indicadores, start para determinar el valor desde el cual los indicadores tienen que comenzar a contar y type para determinar el tipo de indicador que queremos usar. Los valores disponibles para el atributo type son 1 (números), a (letras minúsculas), A (letras mayúsculas), i (números romanos en minúsculas) e I (números romanos en mayúsculas). -->
+                <ol>
+                    <li>Naruto. Manga 1</li>
+                    <li>Naruto. Manga 2</li>
+                    <li>Naruto. Manga 3</li>
+                    <li>Naruto. Manga 4</li>
+                </ol>
+                <!--Si necesitamos declarar la posición de cada ítem, podemos crear la lista con el elemento <ol>. Este elemento crea una lista de ítems en el orden en el que se han declarado en el código, pero en lugar de usar puntos para identificarlos, les asigna un valor. Por defecto, los indicadores se crean con números, pero podemos cambiarlos con el atributo type. En el siguiente ejemplo, usamos letras mayúsculas. -->
+                <ol type="A">
+                    <li>Naruto. Manga 1</li>
+                    <li>Naruto. Manga 2</li>
+                    <li>Naruto. Manga 3</li>
+                    <li>Naruto. Manga 4</li>
+                </ol>
+                <ol type="a">
+                    <li>Naruto. Manga 1</li>
+                    <li>Naruto. Manga 2</li>
+                    <li>Naruto. Manga 3</li>
+                    <li>Naruto. Manga 4</li>
+                </ol>
+                <ol type="I">
+                    <li>Naruto. Manga 1</li>
+                    <li>Naruto. Manga 2</li>
+                    <li>Naruto. Manga 3</li>
+                    <li>Naruto. Manga 4</li>
+                </ol>
+                <ol type="i">
+                    <li>Naruto. Manga 1</li>
+                    <li>Naruto. Manga 2</li>
+                    <li>Naruto. Manga 3</li>
+                    <li>Naruto. Manga 4</li>
+                </ol>
+                <!-- Aunque los ítems se muestran siempre en el orden en el que se han declarado en el código, podemos utilizar otros atributos del elemento <ol> para cambiar el orden de los indicadores. Por ejemplo, agregando el atributo reversed logramos que los indicadores se muestren en orden invertido. -->
+                <ol type="1" reversed>
+                    <li>Naruto. Manga 1</li>
+                    <li>Naruto. Manga 2</li>
+                    <li>Naruto. Manga 3</li>
+                    <li>Naruto. Manga 4</li>
+                </ol>
+                <ol start="10">
+                    <li>Naruto. Manga 1</li>
+                    <li>Naruto. Manga 2</li>
+                    <li>Naruto. Manga 3</li>
+                    <li>Naruto. Manga 4</li>
+                </ol>
+                <ol type="A" start="12">
+                    <li>Naruto. Manga 1</li>
+                    <li>Naruto. Manga 2</li>
+                    <li>Naruto. Manga 3</li>
+                    <li>Naruto. Manga 4</li>
+                </ol>
+                
+                <h2>Listas con el elemento dl</h2>
+                <!-- <dl> Este elemento crea una lista de términos y descripciones. El elemento trabaja junto con los elementos <dt> y <dd> para definir los ítems de la lista. El elemento <dl> define la lista, el elemento <dt> define los términos y el elemento <dd> define las descripciones. Los elementos <dl>, <dt>, y <dd> trabajan de forma similar al elemento <ul>, pero su propósito es mostrar una lista de términos y descripciones. Los términos se representan por el elemento <dt> y las descripciones por el elemento <dd>. En el siguiente ejemplo, los usamos para agregar la descripción de los mangas listados anteriormente. Por defecto, los navegadores otorgan estilos a este tipo de listas que incluyen márgenes a los lados para diferenciar los términos de las descripciones. -->
+                <dl> <!-- Lista -->
+                    <dt>Naruto.</dt> <!-- Término -->
+                    <dd>Naruto es el anime más popular del mundo. Es el mejor anime del mundo.</dd> <!-- Descripción -->
+                    <dt>Boruto.</dt> <!-- Término -->
+                    <dd>Es la continuación de Naruto.</dd> <!-- Descripción -->
+                    <dt>Shingeki no Kyojin.</dt> <!-- Término -->
+                    <dd>Por un tiempo fue uno de los animes más populares, su final es pesimo.</dd> <!-- Descripción -->
+                    <dt>Dragón Ball.</dt> <!-- Término -->
+                    <dd>Es muy repetitivo, cero creatividad, cero historia, es para pasar el rato.</dd> <!-- Descripción -->
+                </dl>
+
+                <h2>Lista con el elemento blockquote</h2>
+                <!-- <blockquote> Este elemento representa un bloque de texto que incluye una cita tomada de otro texto en el documento. El elemento <blockquote> es similar al elemento <p>, pero como también incluye márgenes a los costados, se ha usado tradicionalmente para presentar listas de valores. El listado generado por el elemento <blockquote> se muestra igual que otras listas, pero no incluye puntos o números para identificar cada ítem. -->
+                <blockquote>Naruto</blockquote>
+                <blockquote>Boruto</blockquote>
+                <blockquote>Shingeki no Kyojin</blockquote>
+                <blockquote>Bleach</blockquote>
+
+                <h2>Lista con el elemento details</h2>
+                <!-- <details> Este elemento crea una herramienta que se expande cuando se hace clic en ella para mostrar información adicional. La parte visible se define con el elemento <summary>, y se pueden usar elementos comunes como <p> para definir el contenido. En sitios web modernos son comunes las herramientas que revelan información adicional cuando el usuario lo requiere. Para ofrecer esta posibilidad, HTML incluye el elemento <details>. Este elemento muestra un título, especificado por el elemento <summary>, y contenido que se puede representar por elementos comunes como <p> o <blockquote>. Debido a esto, el elemento <details> se puede utilizar para revelar una lista de valores. -->
+                <details> <!-- Lista -->
+                    <summary>Animes</summary> <!-- Titulo, parte visible -->
+                    <p>Naruto</p> <!-- Contenido -->
+                    <p>Boruto</p> <!-- Contenido -->
+                    <p>Bleach</p> <!-- Contenido -->
+                    <p>Shingeki no Kyojin</p> <!-- Contenido -->
+                    <p>Dragón Ball</p> <!-- Contenido -->
+                    <p>Boku no Hero Academia</p> <!-- Contenido -->
+                </details>
+            </aside>
+        </main>
+        <footer>
+            <p>&copy; Carlos 2022. Finalizado el 14/7/2022 a las 03:45 am.</p>
+            <address>New York, Estados Unidos</address>
+        </footer>
+    </body>
+</html>

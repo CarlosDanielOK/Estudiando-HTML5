@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mi primer página web</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Está es mi primer página web. Estoy estudiando Desarrollo Web. Hoy es 17/12/2021."> 
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./icon/Sasuke Chidori.png" type="image/png" sizes="16x16">
+    </head>
+    <body>
+        <header>
+            <h1>Este es el título (h1)</h1> <!-- Este elemento representa un título. El título se declara entre las etiquetas de apertura y cierre. HTML también incluye elementos adicionales para representar subtítulos, hasta seis niveles (<h2>, <h3>, <h4>, <h5>, y <h6>). Los navegadores otorgan estilos por defecto a los elementos <h> que incluyen márgenes y diferentes tamaños de letras, dependiendo de la jerarquía (<h1> es el de más alta jerarquía y <h6> el de menor jerarquía). -->
+            <h2>Este es el subtítulo (h2)</h2>
+            <h3>Este es el subtítulo (h3)</h3>
+            <h4>Este es el subtítulo (h4)</h4>
+            <h5>Este es el subtítulo (h5)</h5>
+            <h6>Este es el subtítulo (h6)</h6>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <p>Este es un parrafo</p> <!-- Este elemento representa un párrafo. El elemento <p> se utiliza ampliamente para representar el cuerpo del texto. Por defecto, los navegadores les asignan estilos que incluyen márgenes y un salto de línea para diferenciar un párrafo de otro. Cuando un párrafo incluye múltiples espacios, el elemento <p> automáticamente reduce ese espacio a solo un carácter e ignora el resto. El elemento también hace algo similar con los saltos de línea. Todo salto de línea introducido en el documento no se considera cuando el texto se muestra en la pantalla. -->
+                </article>
+                <article>
+                    <p>Este es otro parrafo</p>
+                </article>
+                <article>
+                    <pre> <!-- Este elemento representa un texto con formato predefinido, como código de programación o un poema que requiere que los espacios asignados a cada carácter y los saltos de línea se muestren como se han declarado originalmente. El elemento <pre> se configura por defecto con márgenes y un tipo de letra que respeta el formato asignado al texto original, lo que lo hace apropiado para presentar código de programación y cualquier clase de texto con formato predefinido. -->
+                        Naruto Uzumaki.
+                        Sasuke Uchiha.
+                    </pre>
+                </article>
+                <article>
+                    <p>Este es un parrafo con un salto de linea al final de esta oracion.<br>Salto de linea aplicado.</p> <!-- El elemento <br> se usa para insertar saltos de línea. -->
+                </article>
+                <article>
+                    <p>Utilizando el <em>elemento em.</em></p> <!-- El elemento <em> se usa para indicar énfasis. El texto se muestra por defecto con letra cursiva. -->
+                    <p>Utilizando el <i>elemento i.</i></p> <!-- El elemento <i> representa una voz alternativa o un estado de humor, como un pensamiento, un término técnico, etc. El texto se muestra por defecto con letra cursiva. -->    
+                    <p>Utilizando el <strong>elemento strong.</strong></p> <!-- El elemento <strong> se utiliza para indicar importancia. El texto se muestra por defecto en negrita. -->
+                    <p>Utilizando el <b>elemento b.</b></p> <!-- El elemento <b> se usa para indicar importancia. Debería ser implementado solo cuando ningún otro elemento es apropiado para la situación. El texto se muestra por defecto en negrita. -->
+                    <p>Utilizando el <u>elemento u.</u></p> <!-- El elemento <u> representa texto no articulado. Por defecto se muestra subrayado. -->
+                </article>
+                <article>
+                    <p><br>Utilizando el <mark>elemento mark.</mark></p> <!-- <mark> Este elemento resalta texto que es relevante en las circunstancias actuales (por ejemplo, términos que busca el usuario). -->
+                    <p>Utilizando el <cite>elemento cite.</cite></p> <!-- <cite> Este elemento representa el autor o título de una obra, como un libro, una película, etc. -->
+                </article>
+                <article>
+                    <header>
+                        <h1>Utilizando el elemento datetime</h1>
+                        <time datetime="2022-7-11" pubdate>Publicado el 11-7-2022</time> <!-- <time> Este elemento representa una fecha en formato legible para el usuario. Incluye el atributo datetime para especificar un valor en formato de ordenador y el atributo pubdate, el cual indica que el valor asignado al atributo datetime representa la fecha de publicación. El atributo pubdate es un atributo booleano. Este tipo de atributos no requieren un valor; representan el valor true (verdadero) cuando están presentes o false (falso) en caso contrario. -->
+                    </header>
+                </article>
+                <article>
+                    <h1>Utilizando el elemento code</h1>
+                    <!-- El elemento <code> también trabaja junto con otros elementos para presentar contenido, pero tiene una relación particular con el elemento <pre>. Estos elementos se implementan juntos para presentar código de programación. El elemento <code> indica que el contenido es código de programación y el elemento <pre> formatea ese contenido para mostrarlo en pantalla como se ha declarado originalmente en el documento (respetando los espacios y los saltos de línea). -->
+                    <pre>
+                        <code>
+                            int main()
+                            {
+                                cout << "Naruto es el mejor anime del mundo." << endl;
+
+                                return 0;
+                            }
+                        </code>
+                    </pre>
+                </article>
+            </section>
+        </main>
+        <footer> <!-- Los elementos <address> y <small> se insertan normalmente dentro de un elemento <footer> para resaltar información acerca de la página o una sección. -->
+            <address>New York, Estados Unidos. (Utilizando el elemento address).</address> <!-- <address> Este elemento representa información de contacto. Se implementa con frecuencia dentro de los pies de página para definir la dirección de la empresa o el sitio web. -->
+            <small>&copy Naruto 2022. (Utilizando el elemento small).</small> <!-- <small> Este elemento representa letra pequeña, como declaraciones legales, descargos, etc. -->
+        </footer>
+    </body>
+</html>
+
+<!-- A diferencia de los elementos <p> y <pre>, los elementos <br> y <wbr> no asignan ningún margen o tipo de letra al texto, por lo que las líneas se muestran como si pertenecieran al mismo párrafo y con el tipo de letra definida por defecto. -->
+<!-- El elemento <wbr> sugiere la posibilidad de un salto de línea para ayudar al navegador a decidir dónde cortar el texto cuando no hay suficiente espacio para mostrarlo entero.-->

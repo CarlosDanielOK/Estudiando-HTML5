@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aplicando estilos</title>
+        <!-- Una alternativa es la de insertar las reglas CSS en la cabecera del documento usando selectores que determinan los elementos que se verán afectados. Para este propósito, HTML incluye el elemento <style>. -->
+        <style>
+            p {
+                font-size: 30px;
+            }
+        </style>
+        <!-- Declarar estilos en la cabecera del documento ahorra espacio y hace que el código sea más coherente y fácil de mantener, pero requiere que copiemos las mismas reglas en cada uno de los documentos de nuestro sitio web. Debido a que la mayoría de las páginas compartirán el mismo diseño, varias de estas reglas se duplicarán. La solución es mover los estilos a un archivo CSS y luego usar el elemento <link> para cargarlo desde cada uno de los documentos que lo requieran. Este tipo de archivos se denomina hojas de estilo, pero no son más que archivos de texto con la lista de reglas CSS que queremos asignar a los elementos del documento. -->
+        <link rel="stylesheet" href="./css/misestilos.css"> <!-- El elemento <link> se usa para incorporar recursos externos al documento. Dependiendo del tipo de recurso que queremos cargar, tenemos que declarar diferentes atributos y valores. Para cargar hojas de estilo CSS, solo necesitamos los atributos rel y href. El atributo rel significa relación y especifica la relación entre el documento y el archivo que estamos incorporando, por lo que debemos declararlo con el valor stylesheet para comunicarle al navegador que el recurso es un archivo CSS con los estilos requeridos para presentar la página. Por otro lado, el atributo href declara la URL del archivo a cargar. -->
+    </head>
+    <body>
+        <main>
+            <section>
+                <!-- Las propiedades y las reglas definen los estilos que queremos asignar a uno o más elementos, pero estos estilos no se aplican hasta que los incluimos en el documento. Existen tres técnicas disponibles para este propósito. Podemos usar estilos en línea, estilos incrustados u hojas de estilo. El primero, estilos en línea, utiliza un atributo global llamado style para insertar los estilos directamente en el elemento. Este atributo está disponible en cada uno de los elementos HTML y puede recibir una propiedad o una lista de propiedades que se aplicarán al elemento al que pertenece. Si queremos asignar estilos usando esta técnica, todo lo que tenemos que hacer es declarar el atributo style en el elemento que queremos modificar y asignarle las propiedades CSS. El atributo style solo afecta al elemento en el que se ha declarado. Si queremos asignar el mismo estilo a otros elementos, tenemos que repetir el código en cada uno de ellos, lo cual incrementa innecesariamente el tamaño del documento, complicando su actualización y mantenimiento. -->
+                <p style="font-size: 20px;">Naruto</p> <!-- Cuando el navegador lee este atributo, le asigna un tamaño de 20 píxeles al texto dentro del elemento <p>. -->
+            </section>
+            <section>
+                <p>Sasuke</p>
+            </section>
+            <section>
+                <p>Naruto</p>
+            </section>
+            <section>
+                <p>Madara</p>
+            </section>
+            <section>
+                <p>Obito</p>
+            </section>
+        </main>
+    </body>
+</html>

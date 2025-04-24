@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Select</title>
+    </head>
+    <body>
+        <header>
+            <h1>Select en HTML5</h1>
+            <p>Fecha: 11/10/2022</p>
+        </header>
+        <main>
+            <section>
+                <select name="cursos" id="">
+                    <option value="JavaScript">JavaScript</option> <!-- Opción para elegir -->
+                    <option value="HTML5">HTML5</option>
+                    <option value="CSS3">CSS3</option>
+                    <option value="Naruto">Naruto</option>
+                </select>
+            </section>
+            <section>
+                <!-- Esta lista te permite buscar entre muchas opciones y asi seleccionar más fácil. -->
+                <input list="cursos">
+                <datalist id="cursos">
+                    <option value="JavaScript"></option>
+                    <option value="HTML5"></option>
+                    <option value="CSS3"></option>
+                    <option value="Naruto"></option>
+                </datalist>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atributos globales</title>
+        <link rel="icon" href="./icon/Sasuke.png" type="image/png" sizes="16x16">
+    </head>
+    <body>
+        <header>
+            <h1>Atributos globales en HTML5</h1>
+            <p>Fecha: 9/10/2022</p>
+        </header>
+        <nav>
+            <a href="./index.html">Principal</a>
+            <a href="./atributosGlobales.html">Atributos globales 1</a>
+            <a href="./atributosGlobales2.html">Atributos globales 2</a>
+            <a href="./atributosGlobales3.html">Atributos globales 3 (esta página)</a>
+            <a href="./enlaces.html">Enlaces</a>
+            <a href="./formularios.html">Formularios</a>
+            <a href="./imagenes.html">Imágenes</a>
+            <a href="./listados.html">Listados</a>
+            <a href="./tablas.html">Tablas</a>
+            <a href="./texto.html">Texto</a>
+            <p><label>Prueba del atributo form para conectar fuera de form: <input type="search" name="buscar" form="formulario"></label></p>
+        </nav>
+        <main>
+            <section>
+                <!-- disabled—Este es un atributo booleano que desactiva el elemento. Cuando el atributo está presente, el usuario no puede introducir valores o interactuar con el elemento. -->
+                <!-- readonly—Este atributo indica que el valor del elemento no se puede modificar. -->
+                <!-- Los atributos disabled y readonly tienen un propósito similar, no permitir al usuario interactuar con el elemento, pero se aplican en diferentes circunstancias. El atributo disabled normalmente se implementa cuando queremos mostrar al usuario que el elemento puede estar disponible en otras condiciones, como cuando el control no es aplicable en el país del usuario, por ejemplo. Por otro lado, el atributo readonly se implementa cuando solo existe un valor posible y no queremos que el usuario lo cambie. Por ejemplo, en el siguiente formulario, el usuario no puede introducir la edad. -->
+                <form name="formulario" method="get">
+                    <p><label>Nombre: <input type="text" name="nombre"></label></p>
+                    <p><label>Edad: <input type="text" name="edad" disabled></label></p>
+                    <p><label>Pais: <input type="text" name="pais" readonly></label></p>
+                    <p><input type="submit"></p>
+                </form>
+            </section>
+            <section>
+                <form name="formulario" method="get">
+                    <!-- placeholder—Este atributo muestra un texto en el fondo del elemento que indica al usuario el valor que debe introducir. -->
+                    <!-- El atributo placeholder se usa en campos de entrada para ofrecer una pista (una palabra o frase) que ayude al usuario a introducir el valor correcto. El siguiente ejemplo inserta esta ayuda en un campo de búsqueda. -->
+                    <p><label>Buscar: <input type="search" name="buscar" placeholder="Término a buscar"></label></p>
+                    <p><input type="submit"></p>
+                </form>
+            </section>
+            <section>
+                <!-- novalidate—Este es un atributo booleano para el elemento <form> que indica que el formulario no debería ser validado. -->
+                <!-- formnovalidate—Este es un atributo booleano para los elementos <button> e <input> de tipo submit e image que indica que el formulario al que pertenecen no debería ser validado. -->
+                <form name="formulario" method="get">
+                    <p><label>Correo: <input type="email" name="correo"></label></p>
+                    <p>
+                        <input type="submit" value="Enviar">
+                        <input type="submit" value="Grabar" formnovalidate>
+                    </p>
+                </form>
+            </section>
+            <section>
+                <!-- required—Este es un atributo booleano que indica al navegador que el usuario debe seleccionar o insertar un valor en el elemento para validar el formulario. -->
+                <!-- Cuando usamos el tipo email para recibir una cuenta de correo, el navegador controla si el valor introducido es una cuenta de correo, pero valida el campo cuando se encuentra vacío. Esto se debe a que el campo no es obligatorio. HTML ofrece el atributo required para cambiar esta condición. Cuando se incluye el atributo required, el campo solo será válido si el usuario introduce un valor y este valor cumple con los requisitos de su tipo. El siguiente ejemplo implementa este atributo para forzar al usuario a introducir un correo electrónico. -->
+                <form name="formulario" method="get">
+                    <p><label>Correo: <input type="email" name="correo" required></label></p>
+                    <p>
+                        <input type="submit" value="Enviar">
+                        <input type="submit" value="Grabar" formnovalidate>
+                    </p>
+                </form>
+            </section>
+            <section>
+                <!-- pattern—Este atributo define una expresión regular que el navegador debe usar para validar el valor insertado en el campo. -->
+                <!-- El atributo pattern nos permite crear un filtro personalizado usando expresiones regulares. Las expresiones regulares son textos compuestos por una serie de caracteres que definen un patrón de concordancia. Por ejemplo, los caracteres 0-9 determinan que solo se aceptan los números entre 0 y 9. Utilizando esta clase de expresiones, podemos crear un filtro personalizado para validar cualquier valor que necesitemos. El siguiente formulario incluye un campo de entrada que solo acepta números con cinco dígitos. -->
+                <form name="formulario" method="get">
+                    <p><label>Código postal: <input pattern="[0-9]{5}" name="cp" title="Inserte su código postal"></label></p> <!-- El elemento <input> incluye el atributo pattern con el valor [0-9]{5}. Esta expresión regular determina que el valor debe tener exactamente cinco caracteres y que esos caracteres deben ser números entre 0 y 9. En consecuencia, solo podemos insertar números de cinco dígitos; cualquier otro carácter o tamaño devolverá un error. Estos tipos de entrada también pueden incluir el atributo title para explicar al usuario cuál es el valor esperado. Este mensaje complementa el mensaje de error estándar que muestra el navegador. -->
+                    <p><input type="submit"></p>
+                </form>
+            </section>
+            <section>
+                <!-- multiple—Este es un atributo booleano que indica al navegador que se pueden insertar múltiples valores en el campo (se aplica a elementos <input> de tipo email y file). -->
+                <!-- Los tipos de entrada email y file solo permiten al usuario introducir un valor a la vez. Si queremos permitir la inserción de múltiples valores, tenemos que incluir el atributo multiple. Con este atributo, el usuario puede insertar todos los valores que quiera separados por coma. El siguiente ejemplo incluye un campo de entrada que acepta múltiples direcciones de correo. -->
+                <form name="formulario" method="get">
+                    <p><label>Correo (multiples): <input type="email" name="correo" multiple></label></p>
+                    <p><input type="submit"></p>
+                </form>
+            </section>
+            <section>
+                <!-- autocomplete—Este atributo activa o desactiva la función de autocompletar. Los valores disponibles son on y off. -->
+                <!-- El atributo autocomplete activa una herramienta que le sugiere al usuario qué introducir según los valores insertados previamente. Los valores disponibles para este atributo son on y off (activar y desactivar la herramienta). Este atributo también se puede implementar en el elemento <form> para que afecte a todos los elementos del formulario. El siguiente formulario desactiva las sugerencias para una búsqueda. -->
+                <form name="formulario" method="get">
+                    <p><label>Buscar: <input type="search" name="buscar" autocomplete="off"></label></p>
+                    <p><input type="submit" value="Buscar"></p>
+                </form>
+            </section>
+            <section>
+                <!-- autofocus—Este atributo booleano solicita al navegador que mueva el foco al elemento tan pronto como se carga el documento. -->
+                <!-- Otro atributo que puede ayudar al usuario a decidir qué insertar es autofocus. En este caso, el atributo establece el foco en el elemento cuando se carga el documento, sugiriendo al usuario qué valor insertar primero. El siguiente ejemplo incluye dos campos de entrada para insertar el nombre y la edad del usuario, pero el campo para la edad incluye el atributo autofocus y, por lo tanto, el navegador posicionará el cursor en este campo por defecto.-->
+                <form name="formulario" method="get">
+                    <p><label>Nombre: <input type="text" name="nombre"></label></p>
+                    <p><label>Edad: <input type="text" name="edad" autofocus></label></p>
+                    <p><input type="submit" value="Enviar"></p>
+                </form>
+            </section>
+            <section>
+                <!-- spellcheck—Este atributo solicita al navegador que compruebe la ortografía y gramática del valor introducido en el campo. Los valores disponibles son true (verdadero) y false (falso). -->
+                <!-- Otra herramienta que pueden activar automáticamente los navegadores es el control de ortografía. A pesar de la utilidad de esta herramienta y de que los usuarios esperan casi siempre tenerla a su disposición, puede resultar inapropiada en ciertas circunstancias. La herramienta se activa por defecto, pero podemos incluir el atributo spellcheck con el valor false para desactivarla. -->
+                <form name="formulario" method="get">
+                    <p><label>Texto: <textarea name="texto" cols="50" rows="6" spellcheck="false"></textarea></label></p>
+                    <p><input type="submit" value="Enviar"></p>
+                </form>
+            </section>
+            <section>
+                <!-- form—Este atributo asocia el elemento con un formulario. Se usa para conectar un elemento con un formulario cuando el elemento no se define entre las etiquetas <form>. El valor asignado a este atributo debe ser el mismo asignado al atributo id del elemento <form>. -->
+                <!-- Finalmente, existe otro atributo útil que podemos implementar para declarar como parte del formulario elementos que no se han incluido entre las etiquetas <form>. Por ejemplo, si tenemos un campo de entrada en el área de navegación, pero queremos que el elemento se envíe con el formulario definido en el área central del documento, podemos conectar este elemento con el formulario usando el atributo form (el valor de este atributo debe coincidir con el valor del atributo id asignado al elemento <form>). -->
+                <form name="formulario" id="formulario" method="get">
+                    <p><label>Prueba del atributo form para conectar fuera de form: <input type="submit" value="Enviar"></label></p>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

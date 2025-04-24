@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Estudiando formularios en HTML5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Estoy estudiando formularios en HTML5. Hoy es 29/7/2022.">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="robots" content="index,follow">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./icon/Sasuke.png" type="image/png" sizes="16x16">
+    </head>
+    <body>
+        <header>
+            <h1>Estudiando formularios en HTML5</h1>
+            <p>Fecha: 29/7/2022. Hora: 02:07 am.</p>
+        </header>
+        <main>
+            <section>
+                <!-- Los formularios pueden presentar varias herramientas que permiten al usuario interactuar con el documento, incluidos campos de texto, casillas de control, menús desplegables y botones. Cada una de estas herramientas se representa por un elemento y el formulario queda definido por el elemento <form>, que incluye etiquetas de apertura y cierre para agrupar al resto de los elementos y requiere de algunos atributos para determinar cómo se envía la información al servidor. El siguiente ejemplo define un formulario básico. El atributo name identifica el formulario con el nombre "formulario", el atributo method determina que los datos se incluirán en la URL (GET), y el atributo action declara que procesar.php es el archivo que se ejecutará en el servidor para procesar la información y devolver el resultado. Y luego incorporar en su interior todos los elementos que el usuario necesitará para insertar la información y enviarla al servidor. Por ejemplo, si queremos que el usuario inserte su nombre y edad, tenemos que incluir dos campos de entrada para texto y un tercer elemento para crear el botón con el que enviar el formulario. La información insertada en el formulario se envía al servidor para ser procesada. Para que el servidor pueda identificar cada valor, los elementos deben incluir el atributo name. Con este atributo podemos asignar un nombre único a cada elemento. En este ejemplo, llamamos a los campos de entrada "nombre" y "edad" (el elemento <input> que crea el botón para enviar el formulario no necesita un nombre porque no envía ningún dato al servidor). Los elementos de formulario no generan un salto de línea; se muestran en la pantalla uno detrás del otro. Si queremos que el navegador muestre un elemento en cada línea, tenemos que modificar el diseño nosotros mismos. En este ejemplo usamos elementos <p> para separar los elementos del formulario, pero este diseño normalmente se logra a través de estilos CSS, como veremos en el Capítulo 4. -->
+                <form name="formulario" method="get" action="procesar.php">
+                    <p>
+                        <label>Nombre: <input type="text" name="nombre"></label></p> <!-- Los formularios necesitan incluir descripciones que le indiquen al usuario lo datos que debe introducir. Por esta razón, HTML incluye el elemento <label>. Debido a que estos elementos no solo le indican al usuario qué valor debe introducir, sino que además ayudan al navegador a identificar cada parte del formulario, tienen asociarse al elemento al que están describiendo. Para asociar un elemento <label> con el elemento de formulario correspondiente, podemos incluir el elemento de formulario dentro del elemento <label>, como muestra el siguiente ejemplo. -->
+                    <p>
+                        <label>Edad: <input type="text" name="edad" value="18"></label></p> <!-- El atributo value también se puede usar para declarar el valor inicial de un elemento. Por ejemplo, podemos insertar la edad del usuario en el campo edad si ya la conocemos. -->
+                    <p><input type="submit" value="Enviar datos"></p> <!-- Otro atributo que podemos usar en este ejemplo es value. El tipo de entrada submit crea un botón para enviar el formulario. Por defecto, los navegadores le dan al botón el título Enviar (Submit), pero podemos usar el atributo value para modificarlo. -->
+                </form>
+            </section>
+            <section>
+                <form name="formulario" method="get" action="procesar.php">
+                    <p>
+                        <label for="nombre">Nombre: </label> <!-- Otra alternativa para asociar un elemento <label> con su elemento de formulario es implementando el atributo for. El atributo for conecta el elemento <label> con el elemento de formulario por medio del valor del atributo id, según ilustra el siguiente ejemplo. -->
+                        <input type="text" name="nombre" id="nombre">
+                    </p>
+                    <p>
+                        <label for="edad">Edad: </label>
+                        <input type="text" name="edad" id="edad">
+                    </p>
+                    <p><input type="submit"></p>
+                </form>
+            </section>
+            <section>
+                <form name="formulario" method="get" action="procesar.php">
+                    <p><label>Nombre: <input type="text" name="nombre" maxlength="15"></label></p> <!-- maxlength—Este atributo especifica el máximo número de caracteres que se permite introducir en el campo. -->
+                    <!-- El tipo number asignado al campo edad le dice al elemento que solo acepte números. El resto de los tipos de entrada implementados en este ejemplo no imponen ninguna restricción en los caracteres introducidos, pero le indican al navegador la clase de valores que se esperan del usuario. Por ejemplo, el tipo email espera una cuenta de correo, de modo que si el dato introducido no es una cuenta de correo, el navegador no permite que se envíe el formulario y muestra un error en pantalla. El tipo url trabaja exactamente igual que el tipo email, pero con direcciones web. Este tipo de campo acepta solo URL absolutas y devuelve un error si el valor no es válido. Otros tipos como tel no exigen ninguna sintaxis en particular pero le solicitan al navegador que sugiera al usuario posibles valores a introducir o incluya un teclado específico en los dispositivos que lo requieren (en dispositivos móviles, el teclado que se muestra cuando el usuario hace clic en el campo telefono incluye solo dígitos para facilitar que se introduzcan números telefónicos. Aunque estos tipos de campo presentan sus propias restricciones, todos se ven iguales en el navegador. -->
+                    <p><label>Edad: <input type="number" name="edad" min="10" max="100"></label></p> <!-- Con los atributos min y max se restringe el valor insertado en el campo edad de nuestro formulario a un mínimo de 13 y un máximo de 100. -->
+                    <p><label>Edad: <input type="range" name="edad" min="10" max="100" value="20"></label></p> <!-- Otro tipo de entrada que implementa estos mismo atributos es range. El tipo range crea un campo que nos permite seleccionar un número desde un rango de valores. El valor inicial se establece de acuerdo a los valores de los atributos min y max, pero podemos declarar un valor específico con el atributo value. -->
+                    <p><label>Correo: <input type="email" name="correo"></label></p>
+                    <p><label>Teléfono: <input type="tel" name="telefono"></label></p>
+                    <p><label>Sitio Web: <input type="url" name="sitioweb"></label></p>
+                    <p><input type="submit"></p>
+                </form>
+            </section>
+            <section>
+                <form name="formulario" method="get" action="procesar.php">
+                    <p><label>Nombre: <input type="text" name="nombre" maxlength="15"></label></p>
+                    <!-- El tipo radio crea un botón circular que se resalta cuando se selecciona. Esto nos permite crear una lista de valores que el usuario puede seleccionar con solo hacer clic en el botón correspondiente. Para ofrecer al usuario todas las opciones disponibles, tenemos que insertar un elemento <input> por cada opción. Los elementos <input> se asocian entre ellos por medio del valor del atributo name, y el valor de cada opción se define por el atributo value. En el formulario declaramos cuatro elementos <input> de tipo radio para ofrecer distintas edades que el usuario puede elegir. Como todos los elementos tienen el mismo nombre (edad), se consideran parte del mismo grupo y, por lo tanto, solo una de las opciones puede ser seleccionada a la vez. Además del atributo name, también implementamos un atributo booleano llamado checked. Este atributo le dice al navegador que seleccione el botón cuando se carga el documento, lo cual determina la edad de 15 años como el valor por defecto. Solo se puede seleccionar uno de estos botones a la vez. El valor asignado al atributo value del elemento seleccionado es el que se enviará al servidor.-->
+                    <p><label><input type="radio" name="edad" value="15" checked>15 años</label></p>
+                    <p><label><input type="radio" name="edad" value="30">30 años</label></p>
+                    <p><label><input type="radio" name="edad" value="45">45 años</label></p>
+                    <p><label><input type="radio" name="edad" value="60">60 años</label></p>
+                    <p><input type="submit"></p>
+                </form>
+            </section>
+            <section>
+                <form name="formulario" method="get" action="procesar.php">
+                    <p><label>Nombre: <input type="text" name="nombre" maxlength="15"></label></p>
+                    <!-- El tipo checkbox genera un tipo de entrada similar. En este caso, el usuario puede seleccionar múltiples valores haciendo clic en las casillas correspondientes. El tipo checkbox es similar al tipo radio, pero tenemos que asignar diferentes nombres a cada elemento porque el usuario puede seleccionar varias opciones al mismo tiempo. Cuando el usuario selecciona una o más opciones, los valores de todos esos elementos se envían al servidor. Esta clase de campo de entrada también puede incluir el atributo checked para seleccionar opciones por defecto. En nuestro ejemplo seleccionamos dos valores: 15 y 30. -->
+                    <p><label><input type="checkbox" name="edad15" value="15" checked>15 años</label></p>
+                    <p><label><input type="checkbox" name="edad30" value="30" checked>30 años</label></p>
+                    <p><label><input type="checkbox" name="edad45" value="45">45 años</label></p>
+                    <p><label><input type="checkbox" name="edad60" value="60">60 años</label></p>
+                    <p><input type="submit"></p>
+                </form>
+            </section>
+            <section>
+                <form name="formulario" method="get" action="procesar.php">
+                    <p><input type="date" name="fecha" value="2022-08-02"></p> <!-- Otro tipo de entrada que genera una herramienta visual es date. Este control le ayuda al usuario a seleccionar una fecha. Algunos navegadores lo implementan como un calendario que se muestra cada vez que el usuario hace clic en el campo. El valor enviado al servidor por este tipo de campos tiene la sintaxis año-mes-día, por lo que si queremos especificar un valor inicial o el navegador no facilita una herramienta para seleccionarlo, debemos declararlo en este formato. El elemento <input> crea un campo de entrada con la fecha 2017-02-05 como valor por defecto. Si este elemento se muestra en un navegador que facilita un calendario para seleccionar la fecha, como Google Chrome, la fecha inicial seleccionada en el calendario será la que defina el atributo value. -->
+                    <p><input type="datetime-local" name="fechayhora" value="2022-08-02T03:55:00"></p> <!-- HTML también ofrece el tipo datetime-local para seleccionar fecha y hora. El tipo datetime-local espera un valor que representa la fecha y la hora en el formato año-mes-día horas:minutos:segundos, con la letra T separando la fecha de la hora, como en 2017-02-05T10:35:00. -->
+                    <p><input type="week" name="semana" value="2022-W30"></p> <!-- El tipo week para seleccionar una semana, espera un valor con la sintaxis 2017-W30, donde 2017 es el año y 30 es el número de la semana. -->
+                    <p><input type="month" name="mes" value="2022-08"></p> <!-- El tipo month para seleccionar un mes, espera una sintaxis año-mes. -->
+                    <p><input type="time" name="horasyminutos" value="04:03"></p> <!-- El tipo time para seleccionar horas y minutos, espera un valor que representa horas y minutos con la sintaxis horas:minutos (el carácter : es convertido a la cadena de caracteres %3ª cuando el valor se envía al servidor). -->
+                    <p><input type="submit"></p>
+                </form>
+            </section>
+            <section>
+                <form name="formulario" method="get" action="procesar.php">
+                    <p><input type="color" name="color" value="#FF0000"></p> <!-- El tipo de campo llamado color ofrece una interfaz predefinida para seleccionar un valor. Generalmente, el valor esperado por estos campos es un número hexadecimal, como #00FF00. Un elemento <input> de tipo color se presenta en la pantalla como un rectángulo pintado del color determinado por defecto, seleccionado por el usuario, o definido por el atributo value. Cuando el usuario hace clic en este rectángulo, el navegador abre una herramienta que nos permite seleccionar un nuevo color. -->
+                </form>
+            </section>
+            <section>
+                <form name="formulario" method="get" action="procesar.php">
+                    <p><label>Nombre: <input type="text" name="nombre"></label></p>
+                    <p><label>Edad: <input type="text" name="edad"></label></p>
+                    <p><input type="image" src="./img/Naruto y Sasuke.jpg" width="100"></p> <!-- Podemos implementar el tipo de entrada image que crea un botón con una imagen. Estos tipos de campos requieren el atributo src con la URL del archivo que contiene la imagen que queremos usar para el botón, y pueden incluir los atributos width y height para definir su tamaño. El formulario crea el botón para enviar el formulario con un elemento <input> de tipo image. El elemento carga la imagen del archivo NarutoySasuke.jpg y la muestra en la pantalla. Cuando el usuario hace clic en la imagen, el formulario se envía del mismo modo que con los botones que hemos usado anteriormente. -->
+                </form>
+            </section>
+            <section>
+                <form name="formulario" method="get" action="procesar.php">
+                    <p><label>Nombre: <input type="text" name="nombre"></label></p>
+                    <p><label>Edad: <input type="text" name="edad"></label></p>
+                    <p><button type="submit">Enviar formulario</button></p> <!-- HTML ofrece un elemento más versátil para crear botones llamado <button>. Este elemento incluye el atributo type para determinar el tipo de botón que queremos generar. Por ejemplo, si queremos crear un botón para enviar el formulario, debemos declarar el valor submit. El elemento <button> crea un botón estándar con las mismas características que el botón creado por el elemento <input>. La diferencia es que el título de estos botones se define entre las etiquetas de apertura y cierre, lo cual nos permite usar otros elementos HTML e incluso imágenes para declararlo. Por esta razón, el elemento <button> es el que se prefiere cuando queremos personalizarlo usando estilos CSS o cuando queremos usarlo para ejecutar códigos JavaScript, como veremos en próximos capítulos. -->
+                </form>
+            </section>
+            <section>
+                <form name="formulario" method="get" action="procesar.php">
+                    <p><label>Texto: <textarea name="texto" cols="50" rows="6">Fecha: 5/8/2022</textarea></label></p> <!-- HTML ofrece el elemento <textarea> para insertar múltiples líneas de texto. El elemento está compuesto por etiquetas de apertura y cierre, y puede incluir los atributos rows y cols para definir el ancho y la altura del área en caracteres. En la ventana del navegador, el elemento <textarea> se representa por un recuadro vacío del tamaño determinado por sus atributos o los estilos por defecto. El texto insertado queda limitado por el ancho del área, pero se puede extender verticalmente todo lo que sea necesario. Si el área no es lo suficientemente larga para contener el texto completo, el navegador muestra barras laterales con las que el usuario puede desplazar el contenido. Si necesita declarar un valor inicial para el elemento <textarea>, puede insertarlo entre las etiquetas de apertura y cierre. -->
+                    <p><button type="submit">Enviar texto</button></p>
+                </form>
+            </section>
+            <section>
+                <form name="formulario" method="get" action="procesar.php">
+                    <p>
+                        <label for="listado">Libros: </label>
+                        <!-- HTML ofrece el elemento <select> para presentar una lista de valores al usuario. Cuando el usuario hace clic en este elemento, la lista se muestra en una ventana desplegable, y luego el valor seleccionado por el usuario se inserta en el campo. Debido a que el elemento <select> no genera un campo de entrada, el usuario no puede insertar valores distintos de los incluidos en la lista. El elemento <select> trabaja junto con el elemento <option> para definir las opciones. El elemento <select> debe incluir el atributo name para identificar el valor, y cada elemento <option> debe incluir el atributo value para definir el valor que representa. En este ejemplo, incluimos cuatro opciones, una para cada anime que queremos mostrar en la lista. Los valores de las opciones son definidos desde 1 a 4. Por consiguiente, cada vez que el usuario selecciona un anime y envía el formulario, el número correspondiente a ese anime se envía al servidor con el identificador "anime" (el valor del atributo name). -->
+                        <select name="anime" id="listado">
+                            <option value="1">Naruto</option>
+                            <option value="2">Bleach</option>
+                            <option value="3">Shingeki no Kyojin</option>
+                            <option value="4">Dragón Ball</option>
+                        </select>
+                    </p>
+                    <p><button type="submit">Enviar lista</button></p>
+                </form>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
+
+<!-- Los formularios son herramientas que podemos incluir en un documento para permitir a los usuarios insertar información, tomar decisiones, comunicar datos y cambiar el comportamiento de una aplicación. El propósito principal de los formularios es permitir al usuario seleccionar o insertar información y enviarla al servidor para ser procesada. -->
+<!-- Los formularios pueden presentar varias herramientas que permiten al usuario interactuar con el documento, incluidos campos de texto, casillas de control, menús desplegables y botones. Cada una de estas herramientas se representa por un elemento y el formulario queda definido por el elemento <form>, que incluye etiquetas de apertura y cierre para agrupar al resto de los elementos y requiere de algunos ATRIBUTOS para determinar cómo se envía la información al servidor.
+    name—Este atributo especifica el nombre del formulario. También se encuentra disponible para otros elementos, pero es particularmente útil para elementos de formulario, como veremos más adelante.
+    method—Este atributo determina el método a utilizar para enviar la información al servidor. Existen dos valores disponibles: GET y POST. El método GET se usa para enviar una cantidad limitada de información de forma pública (los datos son incluidos en la URL, la cual no puede contener más de 255 caracteres). Por otro lado, el método POST se utiliza para enviar una cantidad ilimitada de información de forma privada (los datos no son visibles al usuario y pueden tener la longitud que necesitemos).
+    action—Este atributo declara la URL del archivo en el servidor que va a procesar la información enviada por el formulario.
+    target—Este atributo determina dónde se mostrará la respuesta recibida desde el servidor. Los valores disponibles son _blank (nueva ventana), _self (mismo recuadro), _parent (recuadro padre), y _top (la ventana que contiene el recuadro). El valor _self se declara por defecto, lo que significa que la respuesta recibida desde el servidor se mostrará en la misma ventana.
+    enctype—Este atributo declara la codificación aplicada a los datos que envía el formulario. Puede tomar tres valores: application/x-www-form-urlencoded (los caracteres son codificados), multipart/form-data (los caracteres no son codificados), text/plain (solo los espacios son codificados). El primer valor se asigna por defecto.
+    accept-charset—Este atributo declara el tipo de codificación aplicada al texto del formulario. Los valores más comunes son UTF-8 e ISO-8859-1. El valor por defecto se asigna al documento con el elemento <meta>. -->
+
+<!-- Un formulario puede incluir diferentes herramientas para permitir al usuario seleccionar o insertar información. HTML incluye múltiples ELEMENTOS para crear estas herramientas. Los siguientes son los más utilizados.
+    <input>—Este elemento crea un campo de entrada. Puede recibir diferentes tipos de entradas, dependiendo del valor del atributo type.
+    <textarea>—Este elemento crea un campo de entrada para insertar múltiples líneas de texto. El tamaño se puede declarar en números enteros usando los atributos rows y cols, o en píxeles con estilos CSS, como veremos en el Capítulo 3.
+    <select>—Este elemento crea una lista de opciones que el usuario puede elegir. Trabaja junto con el elemento <option> para definir cada opción y el elemento <optgroup> para organizar las opciones en grupos.
+    <button>—Este elemento crea un botón. Incluye el atributo type para definir el propósito del botón. Los valores disponibles son submit para enviar el formulario (por defecto), reset para reiniciar el formulario, y button para realizar tareas personalizadas.
+    <output>—Este elemento representa un resultado producido por el formulario. Se implementa por medio de código JavaScript para mostrar el resultado de una operación al usuario.
+    <meter>—Este elemento representa una medida o el valor actual de un rango.
+    <progress>—Este elemento representa el progreso de una operación.
+    <datalist>—Este elemento crea un listado de valores disponibles para otros controles. Trabaja junto con el elemento <option> para definir cada valor.
+    <label>—Este elemento crea una etiqueta para identificar un elemento de formulario.
+    <fieldset>—Este elemento agrupa otros elementos de formulario. Se usa para crear secciones dentro de formularios extensos. El elemento puede contener un elemento <legend> para definir el título de la sección. -->
+<!-- El elemento <input> es el más versátil de todos. Este elemento genera un campo de entrada en el que el usuario puede seleccionar o insertar información, pero puede adoptar diferentes características y aceptar varios tipos de valores dependiendo del valor de su atributo type. Los siguientes son los valores disponibles para este atributo.
+    text—Este valor genera un campo de entrada para insertar texto genérico.
+    email—Este valor genera un campo de entrada para insertar cuentas de correo.
+    search—Este valor genera un campo de entrada para insertar términos de búsqueda.
+    url—Este valor genera un campo de entrada para insertar URL.
+    tel—Este valor genera un campo de entrada para insertar números de teléfono.
+    number—Este valor genera un campo de entrada para insertar números.
+    range—Este valor genera un campo de entrada para insertar un rango de números.
+    date—Este valor genera un campo de entrada para insertar una fecha.
+    datetime-local—Este valor genera un campo de entrada para insertar fecha y hora.
+    week—Este valor genera un campo de entrada para insertar el número de la semana (dentro del año).
+    month—Este valor genera un campo de entrada para insertar el número del mes.
+    time—Este valor genera un campo de entrada para insertar una hora (horas y minutos).
+    hidden—Este valor oculta el campo de entrada. Se usa para enviar información complementaria al servidor.
+    password—Este valor genera un campo de entrada para insertar una clave. Reemplaza los caracteres insertados con estrellas o puntos para ocultar información sensible.
+    color—Este valor genera un campo de entrada para insertar un color.
+    checkbox—Este valor genera una casilla de control que permite al usuario activar o desactivar una opción.
+    radio—Este valor genera un botón de opción para seleccionar una opción de varias posibles.
+    file—Este valor genera un campo de entrada para seleccionar un archivo en el ordenador del usuario.
+    button—Este valor genera un botón. El botón trabaja como el elemento <button> de tipo button. No realiza ninguna acción por defecto; la acción debe ser definida desde JavaScript, como veremos en próximos capítulos.
+    submit—Este valor genera un botón para enviar el formulario.
+    reset—Este valor genera un botón para reiniciar el formulario.
+    image—Este valor carga una imagen que se usa como botón para enviar el formulario. Un elemento <input> de este tipo debe incluir el atributo src para especificar la URL de la imagen.
+    maxlength—Este atributo especifica el máximo número de caracteres que se permite introducir en el campo.
+    minlength—Este atributo especifica el mínimo número de caracteres que se permite introducir en el campo.
+    min—El valor de este atributo determina el valor mínimo que acepta el campo.
+    max—El valor de este atributo determina el valor máximo que acepta el campo.
+    step—El valor de este atributo determina el número por el cual el valor del campo se puede incrementar o reducir. Por ejemplo, si declaramos el valor 5 para este atributo y un valor mínimo de 0 y uno máximo de 10 para el campo, el navegador no nos dejará introducir valores entre 0 y 5 o 5 y 10. -->

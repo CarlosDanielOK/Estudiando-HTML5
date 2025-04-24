@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Estudiando enlaces en HTML5</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Estoy estudiando enlaces en HTML5. Hoy es 12/7/2022.">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./icon/Naruto portada.jpg" type="image/jpg" sizes="16x16">
+    </head>
+    <body>
+        <header id="titulo"> <!-- Usamos el atributo id con el valor "titulo" para identificar el elemento <header>. Usando este valor y el carácter #, creamos un enlace al final del contenido (dentro del elemento <main>) que lleva al usuario hacia la parte superior de la página. Cuando el usuario hace clic en el enlace, en lugar de abrir un documento, el navegador desplaza la página hasta que el contenido del elemento <header> se vuelve visible. -->
+            <h1>Estudiando enlaces en HTML5</h1>
+        </header>
+        <nav>
+            <!-- <a> Este elemento crea un enlace. El texto o la imagen que representa el enlace se incluye entre las etiquetas de apertura y cierre. El elemento incluye el atributo href para especificar la URL del enlace. Los elementos <a> incluyen el atributo href para indicar al navegador el documento que tiene que abrir cuando el usuario hace clic en el enlace. Por defecto, los enlaces se muestran subrayados y en color azul (o violeta si el usuario ya ha hecho clic en ellos). Cuando el usuario hace clic en cualquiera de estos enlaces, el navegador descarga el documento indicado por el atributo href y muestra su contenido en pantalla. Por ejemplo, si hacemos clic en el enlace creado para la opción Principal en el código, el navegador descarga el archivo index.html y muestra su contenido en la pantalla. -->
+            <a href="index.html">Principal</a> |
+            <a href="atributosGlobales.html">Atributos globales</a> |
+            <a href="texto.html">Texto</a> |
+            <a href="enlaces.html">Enlaces (es un enlace a este mismo documento)</a>
+        </nav>
+        <main>
+            <section>
+                <article>
+                    <p>Articulo 1</p>
+                </article>
+                <article>
+                    <p>Articulo 2</p>
+                </article>
+                <article>
+                    <p>Articulo 3</p>
+                </article>
+                <article>
+                    <p><a href="#titulo">Volver al titulo</a></p>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <address>Toronto, Canada</address>
+            <!-- Los documentos enlazados en el menú dentro de <nav> pertenecen al mismo sitio web y esa es la razón por la que usamos URL relativas para especificar su ubicación, pero si lo que necesitamos es crear enlaces a documentos que no están almacenados en nuestro servidor, tenemos que usar URL absolutas, como en el siguiente ejemplo. -->
+            <small>&copy; Carlos 2022 <a href="https://www.facebook.com" target="_blank">facebook</a></small>
+            <br>
+            <!-- El elemento <a> también se puede usar para crear enlaces a aplicaciones. HTML ofrece las palabras clave mailto y tel para especificar una cuenta de correo o un número de teléfono. Cuando se hace clic en un enlace de estas características, el sistema abre el programa encargado de responder a este tipo de solicitudes (enviar un correo o hacer una llamada telefónica) y le envía los datos especificados en el enlace. El siguiente ejemplo implementa la palabra clave mailto para enviar un correo electrónico. -->
+            <small><a href="mailto:info@jdgauchat.com">Mail de jdgauchat (Autor del libro)</a></small>
+        </footer>
+    </body>
+</html>
+
+<!-- Conectar documentos con otros documentos mediante enlaces es lo que hace posible la Web. Como mencionamos anteriormente, un enlace es contenido asociado a una URL que indica la ubicación de un recurso. Cuando el usuario hace clic en el contenido (texto o imagen), el navegador descarga el recurso. HTML incluye el siguiente elemento para crear enlaces: <a> -->
+<!-- Los enlaces se pueden crear para conectar el documento actual con otros documentos en el mismo sitio web o en otros sitios. -->
+<!-- El elemento <a> puede incluir el atributo target para especificar el destino en el cual el documento será abierto. El valor _self se asigna por defecto, lo que significa que el documento se abre en la misma ubicación que el documento actual (el mismo recuadro o ventana). Otros valores son _blank (el documento se abre en una nueva ventana), _parent (el documento se abre en el recuadro padre), y _top (el documento se abre en la ventana actual). -->
+<!-- Además de conectar un documento con otro, los enlaces también se pueden crear hacia otros elementos dentro del mismo documento. Esto es particularmente útil cuando el documento genera una página extensa que el usuario debe desplazar para poder ver todo su contenido. Aprovechando esta característica, podemos crear enlaces hacia diferentes partes de una página. Cuando el usuario quiere ver algo que no es visible al momento, puede hacer clic en estos enlaces y el navegador desplaza la página hasta que el elemento apuntado por el enlace aparece en la pantalla. El elemento que queremos enlazar tiene que ser identificado con el atributo id. Para crear un enlace a un elemento, debemos incluir el valor asignado a este atributo precedido por el carácter #. -->

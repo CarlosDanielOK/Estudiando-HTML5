@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Mi primer página web</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Está es mi primer página web. Estoy estudiando Desarrollo Web. Hoy es 15/12/2021."> 
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./icon/Naruto niño.jpg" type="image/jpg" sizes="16x16">
+    </head>
+    <body>
+        <header>
+            Estoy estudiando atributos globales en HTML5
+        </header>
+        <main>
+            <section id="noticias"> <!-- id: Este atributo nos permite asignar un identificador único a un elemento. El valor del atributo id debe ser único dentro del documento HTML. Se incluye dos elementos <section> en la sección principal (main) del documento para separar artículos de acuerdo a su extensión. Debido a que el contenido de estos elementos es diferente, requieren distintos estilos y, por lo tanto, tenemos que identificarlos con diferentes valores. El primer elemento <section> se ha identificado con el valor "noticias" y el segundo elemento con el valor "noticiaslocales". -->
+                Artículos largos
+            </section>
+            <section id="noticiasLocales">
+                Artículos cortos
+            </section>
+            <section>
+                <div class="libros">Libro: Naruto Manga 1</div> <!-- Este atributo (class) asigna el mismo identificador a un grupo de elementos. El valor del atributo class se puede duplicar para asociar elementos con características similares. El siguiente ejemplo divide el contenido de una sección con elementos <div>. Debido a que todos tienen un contenido similar, compartirán los mismos estilos y, por lo tanto, deberíamos identificarlos con el mismo valor (todo son de la misma clase). -->
+                <div class="libros">Libro: Naruto Manga 2</div> <!-- Este elemento <div> define una división genérica. Se usa cuando no se puede aplicar ningún otro elemento. -->
+                <div class="libros">Libro: Naruto Manga 3</div>
+                <div class="libros">Libro: Naruto Manga 4</div>
+            </section>
+            <aside>Hoy es 17/12/2021</aside>
+        </main>
+        <footer>
+            &copy; Son las 01:12 hs.
+        </footer>
+    </body>
+</html>
+
+<!-- Los valores asignados a estos atributos son arbitrarios. Puede asignarles cualquier valor que desee, siempre y cuando no incluya ningún espacio en blanco (el atributo class utiliza espacios para asignar múltiples clases a un mismo elemento). Así mismo, para mantener su sitio web compatible con todos los navegadores, debería usar solo letras y números, siempre comenzar con una letra y evitar caracteres especiales. -->

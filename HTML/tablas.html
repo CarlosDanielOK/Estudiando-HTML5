@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Estudiando tablas en HTML5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Estoy estudiando tablas en HTML5. Hoy es 14/7/2022.">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="robots" content="index,follow">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./icon/Rock Lee.png" type="image/png" sizes="16x16">
+    </head>
+    <body>
+        <header>
+            <h1>Estudiando tablas en HTML5</h1>
+            <p>Fecha: 14/7/2022. Hora: 03:58 am.</p>
+        </header>
+        <nav>
+            <a href="index.html">Principal</a> |
+            <a href="atributosGlobales.html">Atributos globales</a> |
+            <a href="texto.html">Texto</a> |
+            <a href="enlaces.html">Enlaces</a> |
+            <a href="listados.html">Listados</a> |
+            <a href="tablas.html">Tablas (enlace a este mismo documento)</a>
+        </nav>
+        <main>
+            <section>
+                <article>
+                    <br><br>
+                    <!-- Las tablas organizan información en filas y columnas. Debido a sus características, se usaron durante mucho tiempo para estructurar documentos HTML, pero con la introducción de CSS, los desarrolladores pudieron lograr el mismo efecto implementando otros elementos. Aunque ya no se recomienda usar tablas para definir la estructura de un documento, todavía se utilizan para presentar información tabular, como estadísticas o especificaciones técnicas, por ejemplo. HTML incluye varios elementos para crear una tabla. Los siguientes son los más utilizados. -->
+                    <!-- <table> Este elemento define una tabla. Incluye etiquetas de apertura y cierre para agrupar el resto de los elementos que definen la tabla. Para incluir una tabla en el documento, primero tenemos que declarar el elemento <table> y luego describir las filas una por una con los elementos <tr> y <td>, como muestra el siguiente ejemplo. Cuando el navegador abre este documento, muestra la información en el orden en el que se ha declarado en el código y con el tamaño determinado por el contenido de las celdas. -->
+                    <table>
+                        <tr> <!-- <tr> Este elemento define una fila de celdas. Incluye etiquetas de apertura y cierre para agrupar las celdas. -->
+                            <td>Naruto</td> <!-- <td> Este elemento define una celda. Incluye etiquetas de apertura y cierre para delimitar el contenido de la celda y puede incluir los atributos colspan y rowspan para indicar cuántas columnas y filas ocupa la celda. -->
+                            <td>Español latino</td>
+                            <td>Perfecto</td>
+                        </tr>
+                        <tr>
+                            <td>Bleach</td>
+                            <td>Ingles</td>
+                            <td>Bueno</td>
+                        </tr>
+                        <tr>
+                            <td>Shingeki no Kyojin</td>
+                            <td>Japones</td>
+                            <td>Excelente, menos el final</td>
+                        </tr>
+                    </table>
+                </article>
+
+                <article>
+                    <br><br>
+                    <!-- Si queremos incluir una cabecera para describir el contenido de cada columna, podemos crear una fila de celdas adicional representadas con el elemento <th>. -->
+                    <table>
+                        <tr>
+                            <th>Anime</th> <!-- <th> Este elemento define una celda para la cabecera de la tabla. Incluye etiquetas de apertura y cierre para delimitar el contenido de la celda y puede incluir los atributos colspan y rowspan para indicar cuántas columnas y filas ocupa la celda. Por defecto, los navegadores muestran las cabeceras con el texto en negrita y centrado. -->
+                            <th>Idioma</th>
+                            <th>Calificación</th>
+                        </tr>
+                        <tr> <!-- <tr> Este elemento define una fila de celdas. Incluye etiquetas de apertura y cierre para agrupar las celdas. -->
+                            <td>Naruto</td> <!-- <td> Este elemento define una celda. Incluye etiquetas de apertura y cierre para delimitar el contenido de la celda y puede incluir los atributos colspan y rowspan para indicar cuántas columnas y filas ocupa la celda. -->
+                            <td>Español latino</td>
+                            <td>Perfecto</td>
+                        </tr>
+                        <tr>
+                            <td>Bleach</td>
+                            <td>Ingles</td>
+                            <td>Bueno</td>
+                        </tr>
+                        <tr>
+                            <td>Shingeki no Kyojin</td>
+                            <td>Japones</td>
+                            <td>Excelente, menos el final</td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <p>Finalizado el 14/7/2022 a las 04:39 am.</p>
+            <p>&copy; Carlos 2022</p>
+        </footer>
+    </body>
+</html>

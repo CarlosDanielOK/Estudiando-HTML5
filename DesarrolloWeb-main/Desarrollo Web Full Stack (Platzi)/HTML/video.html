@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Videos</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Estudiando videos en HTML5">
+        <meta name="robots" content="index, follow">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Videos en HTML5</h1>
+            <p>Fecha: 13/9/2022</p>
+        </header>
+        <nav>
+            <a href="./index.html">Principal</a>
+            <a href="./desafio1.html">Desafio 1</a>
+            <a href="./imagenes.html">Imágenes</a>
+        </nav>
+        <main>
+            <section>
+                <video src="./video/Uzui vs Gyutaro - Demon Slayer 4K 60fps.mp4" controls preload="auto"></video> <!-- El atributo controls permite reproducir el video, es decir, te aparecen los controles para poner play, volumen, pantalla completa, linea de tiempo del video, etc. El atributo preload permite que el video se empiece a descargar cuando el usuario entra a la página, esto con el fin de ahorrar tiempo y asi cuando el usuario quiera ver el video no tenga que esperar a que el video recien se descargue. -->
+            </section>
+            <section>
+                <video src="./video/Uzui vs Gyutaro - Demon Slayer 4K 60fps.mp4#t=8,50" controls preload="auto"> <!-- #t=8,50 sirve para que el video empiece en el segundo 8 y termine en el segundo 50. -->
+                </video>
+            </section>
+            <section>
+                <!-- Las etiquetas source sirven para darle opciones al navegador en distintos formatos de un mismo video en caso de que el navegador no acepte o no sea compatible con un formato. El navegador al leer la etiqueta video y en caso de que no reconozca el formato mp4 pero si m4v entonces renderizara el m4v. -->
+                <video controls preload="auto">
+                    <source src="./video/Uzui vs Gyutaro - Demon Slayer 4K 60fps.mp4">
+                    <source src="./video/Uzui vs Gyutaro - Demon Slayer 4K 60fps.m4v">
+                </video>
+            </section>
+        </main>
+        <footer>
+            <p>Terminado</p>
+        </footer>
+    </body>
+</html>
